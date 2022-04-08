@@ -1,0 +1,7 @@
+{
+  "operation" : "query",
+  "query" : "select Id,(select id,Billing_Account__r.Billing_Account_Number__c from Customer_Account_Relation__r limit 1) from Account where id in (select customer__c from Interaction__c where customer__c != null)",
+  "contentType" : "CSV",
+  "columnDelimiter" : "COMMA",
+  "lineEnding" : "CRLF"
+}

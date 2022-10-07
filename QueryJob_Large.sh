@@ -61,7 +61,7 @@ runJob(){
 			locator=""
 			while [[ "$locator" != "null" ]]
 			do
-				for loc in `grep -A 1 "sforce-locator: " "Results/${jobId}/${jobId}_QueryResults_${counter}.csv" | grep -E 'sforce-locator: |"$'`
+				for loc in `grep -A 1 "sforce-locator: " "Results/${jobId}/${jobId}_QueryResults_${counter}.csv" | grep -E 'Sforce-Locator: |"$'`
 				do
 					locator="${loc}"
 				done
